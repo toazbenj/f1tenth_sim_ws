@@ -1,3 +1,4 @@
+# Ego
 Panels:
   - Class: rviz_common/Displays
     Help Height: 78
@@ -7,6 +8,14 @@ Panels:
         - /Global Options1
         - /Status1
         - /Map1/Topic1
+        - /LaserScan1
+        - /RobotModel1
+        - /MarkerArray1
+        - /MarkerArray1/Topic1
+        - /MarkerArray1/Namespaces1
+        - /Map2
+        - /Map2/Topic1
+        - /Map2/Update Topic1
       Splitter Ratio: 0.5
     Tree Height: 802
   - Class: rviz_common/Selection
@@ -157,6 +166,234 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /opp_robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        ego_racecar/back_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ego_racecar/back_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ego_racecar/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ego_racecar/front_left_hinge:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ego_racecar/front_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ego_racecar/front_right_hinge:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ego_racecar/front_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ego_racecar/laser_model:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: LookaheadMarker
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /ego_racecar/lookahead_waypoint
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: LookaheadMarker
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /ego_racecar/current_waypoint
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: LookaheadMarker
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /opp_racecar/lookahead_waypoint
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: LookaheadMarker
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /opp_racecar/current_waypoint
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        /ego_racecar/trajectories: true
+        /waypoints_markers: true
+      Topic:
+        Depth: 5
+        Durability Policy: Keep Last
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /ego_racecar/selected_trajectory
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        /ego_racecar/trajectories: true
+        /waypoints_markers: true
+      Topic:
+        Depth: 5
+        Durability Policy: Keep Last
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /opp_racecar/selected_trajectory
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        /ego_racecar/trajectories: true
+        /waypoints_markers: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /waypoints_markers
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        /ego_racecar/trajectories: true
+        /waypoints_markers: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /ego_racecar/trajectories
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        /ego_racecar/trajectories: true
+        /waypoints_markers: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /opp_racecar/trajectories
+      Value: true
+    - Class: rviz_default_plugins/Map
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /ego_racecar/cost_map
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /ego_racecar/cost_map_updates
+      Alpha: 0.7
+      Color Scheme: map
+      Draw Behind: false
+      Resolution: 0.8
+      Width: 7
+      Height: 7
+      Position:
+        X: 16.805
+        Y: -2.3006
+        Z: 0
+      Orientation:
+        X: 0
+        Y: 0
+        Z: 0
+        W: 1
+      Use Timestamp: false
+      Value: true
+    - Class: rviz_default_plugins/Map
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /opp_racecar/cost_map
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /opp_racecar/cost_map_updates
+      Alpha: 0.7
+      Color Scheme: map
+      Draw Behind: false
+      Resolution: 0.8
+      Width: 7
+      Height: 7
+      Position:
+        X: 16.805
+        Y: -2.3006
+        Z: 0
+      Orientation:
+        X: 0
+        Y: 0
+        Z: 0
+        W: 1
+      Use Timestamp: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
